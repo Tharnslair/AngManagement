@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="description" content="" />
+  <meta charset="utf-8">
+  <title>Modules</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.17/angular.min.js"></script>
+</head>
+<body ng-app>
+
+<!--   // <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  // <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.17/angular.min.js"></script> -->
+
+<script>
+	
+	var createWorker =  function() {
+
+		var workCount = 0;
+
+		var task1 = function(){
+			workCount += 1;
+			console.log("Task1!!! " + workCount);
+		};
+
+		var task2 = function(){
+			workCount += 1;
+			console.log("Task2!!! " + workCount);
+		};
+
+		return {
+			job1: task1,
+			job2: task2
+		};
+	};
+
+	var worker = createWorker();
+
+	worker.job1();
+	worker.job2();
+	worker.job2();
+	worker.job2();
+
+</script>
+
+</body>
+</html>
